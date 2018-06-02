@@ -19,16 +19,16 @@ function exampleBehaviors() {
   it('should be equal 2', itAlwaysBe2);
 }
 
-function itShouldBeZero(){
+function itShouldBeZero() {
   const cal1 = new Calculator();
   expect(cal1.calculate('')).to.be.equal(0);
 }
 
-function testEmptyString(){
-  it('should be zero',itShouldBeZero);
+function testEmptyString() {
+  it('should be zero', itShouldBeZero);
 }
 
 // Start Describe
 describe('Example', exampleBehaviors);
-describe('Empty string should return zero',testEmptyString);
+describe('Empty string should return zero', testEmptyString);
 
