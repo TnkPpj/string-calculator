@@ -42,6 +42,8 @@ function itShouldBeSum() {
   expect(cal1.calculate('0,-1')).to.be.equal(-1);
   expect(cal1.calculate('9,2')).to.be.equal(11);
   expect(cal1.calculate('9\n8')).to.be.equal(17);
+  expect(cal1.calculate('1,2,3')).to.be.equal(6);
+  expect(cal1.calculate('2\n3\n4')).to.be.equal(9);
 }
 
 function testNumber() {
