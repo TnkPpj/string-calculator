@@ -30,11 +30,23 @@ function testEmptyString() {
 
 function itShouldBeValue() {
   const cal1 = new Calculator();
-  expect(cal1.calculate(2)).to.be.equal(2);
+  expect(cal1.calculate(0)).to.be.equal(0);
+  expect(cal1.calculate(1)).to.be.equal(1);
+  expect(cal1.calculate(Number.MIN_SAFE_INTEGER)).to.be.equal(Number.MIN_SAFE_INTEGER);
+  expect(cal1.calculate(Number.MAX_SAFE_INTEGER)).to.be.equal(Number.MAX_SAFE_INTEGER);
+}
+
+function itShouldBeSum() {
+  const cal1 = new Calculator();
+  expect(cal1.calculate('0,1')).to.be.equal(1);
+  expect(cal1.calculate('0,-1')).to.be.equal(-1);
+  expect(cal1.calculate('9,2')).to.be.equal(11);
+  expect(cal1.calculate('9\n8')).to.be.equal(17);
 }
 
 function testNumber() {
   it('should be value', itShouldBeValue);
+  it('should be sum', itShouldBeSum);
 }
 
 // Start Describe
