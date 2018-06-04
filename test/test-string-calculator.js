@@ -28,7 +28,16 @@ function testEmptyString() {
   it('should be zero', itShouldBeZero);
 }
 
+function itShouldBeValue() {
+  const cal1 = new Calculator();
+  expect(cal1.calculate(2)).to.be.equal(2);
+}
+
+function testNumber() {
+  it('should be value', itShouldBeValue);
+}
+
 // Start Describe
 describe('Example', exampleBehaviors);
 describe('Empty string should return zero', testEmptyString);
-
+describe('A single number should return value', testNumber);
