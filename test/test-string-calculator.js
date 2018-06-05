@@ -32,8 +32,10 @@ function itShouldBeValue() {
   const cal1 = new Calculator();
   expect(cal1.calculate(0)).to.be.equal(0);
   expect(cal1.calculate(1)).to.be.equal(1);
+  expect(cal1.calculate(1000)).to.be.equal(1000);
+  expect(cal1.calculate(1001)).to.be.equal('over1000');
   expect(cal1.calculate(Number.MIN_SAFE_INTEGER)).to.be.equal(Number.MIN_SAFE_INTEGER);
-  expect(cal1.calculate(Number.MAX_SAFE_INTEGER)).to.be.equal(Number.MAX_SAFE_INTEGER);
+  expect(cal1.calculate(Number.MAX_SAFE_INTEGER)).to.be.equal('over1000');
 }
 
 function itShouldBeSum() {
